@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "KNMI"
+version = "0.1.0"
+description = "Example project working with KNMI data"
+authors = ["Erwin Matijsen <erwin@python-cursus.nl>"]
+readme = "README.md"
+packages = [
+    {include = "src"},
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+python-dotenv = "^1.0.0"
+requests = "^2.31.0"
+requests-cache = "^1.2.0"
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.3.0"
+ruff = "^0.3.0"
+mkdocs = "^1.5.3"
+mkdocs-material = "^9.5.10"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
