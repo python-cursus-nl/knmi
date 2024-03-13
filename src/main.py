@@ -6,7 +6,7 @@ CSV = "../data/knmi.csv"
 
 
 def download():
-    """ Download the file from the URL """
+    """Download het bestand van de KNMI-website en sla het op als txt."""
 
     # Get the data from the URL
     response = requests.get(URL)
@@ -21,24 +21,24 @@ def download():
 
 def clean_data():
     """
-    Read in the raw data (txt) and clean it up. Remove help text,
-    spaces and empty lines. Store as CSV.
+    Lees de ruwe gegevens (txt) in en schoon ze op. Verwijder helptekst,
+    spaties en lege regels. Sla op als CSV.
     """
 
     try:
-        # Open the raw data
+        # Open de ruwe gegevens
         with open(TXT, "r", encoding="utf-8") as file:
-            # Loop over every line. If it is the header
-            # (starts with "STN,YYYY") or starts with 260,
-            # we want to keep it. Remove spaces.
+            # Loop over elke regel. Als het de kop is
+            # (begint met "STN,YYYY") of de regel begint met 260,
+            # dan willen we het houden. Verwijder spaties.
             lines = []
             for line in file:
-                # Keep headers and rows with values
+                # Behoud de kop en de regels met gegevens
                 if line.startswith("STN,YYYY") or line.startswith("260"):
-                    # Remove spaces
+                    # Verwijder spaties
                     lines.append(line.replace(" ", ""))
 
-        # Write the cleaned lines to a new CSV-file.
+        # Schrijf de opgeschoonde regels naar een nieuw CSV-bestand.
         with open(CSV, "w", encoding="utf-8") as file:
             file.writelines(lines)
 

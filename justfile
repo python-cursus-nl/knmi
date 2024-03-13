@@ -1,5 +1,5 @@
 format:
     @echo "Running ruff, mypy"
-    ruff .
+    ruff check .
     ruff format .
     mypy .
