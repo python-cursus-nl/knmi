@@ -80,7 +80,7 @@ def get_highest_mean_temp(df):
     # Haal de hoogste jaargemiddelde temperatuur op
     highest_mean_temp = df["Jaargemiddelde"].max()  # Temperatuur in °C
     index = df["Jaargemiddelde"].idxmax()  # Index van de rij met de hoogste temperatuur
-    year = df.loc[index, "Jaar"]  # Jaar van de hoogste temperatuur
+    year = df.at[index, "Jaar"]  # Jaar van de hoogste temperatuur
 
     print(f"Hoogste jaargemiddelde: {highest_mean_temp}°C")
     print(f"Dit was in jaar: {year}")
