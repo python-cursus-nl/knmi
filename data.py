@@ -3,7 +3,7 @@ from datetime import datetime, timedelta
 import pandas as pd
 from requests_cache import CachedSession, SQLiteCache
 
-from src.consts import CSV, KNMI_COLUMNS, MONTH_COLUMNS, TXT, URL
+from consts import CSV, KNMI_COLUMNS, MONTH_COLUMNS, TXT, URL
 
 now = datetime.now()
 tonight = datetime(now.year, now.month, now.day) + timedelta(days=1)

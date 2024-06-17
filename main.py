@@ -1,6 +1,7 @@
 import requests
 
-from src.data import clean_data, download, get_highest_mean_temp, load_data
+from data import clean_data, download, get_highest_mean_temp, load_data
+
 
 if __name__ == "__main__":
     # Download de gegevens
