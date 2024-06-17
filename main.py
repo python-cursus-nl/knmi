@@ -1,20 +1,19 @@
 import requests
 
 URL = "https://cdn.knmi.nl/knmi/map/page/klimatologie/gegevens/maandgegevens/mndgeg_260_tg.txt"
-TXT = "../data/knmi.txt"
-CSV = "../data/knmi.csv"
+TXT = "knmi.txt"
+CSV = "knmi.csv"
 
 
 def download():
     """Download het bestand van de KNMI-website en sla het op als txt."""
 
-    # Get the data from the URL
     response = requests.get(URL)
 
-    # If the status code is 400 or higher raise an error
+    # Als de HTTP-code 400 of hoger is, zal er een uitzondering worden opgeworpen
     response.raise_for_status()
 
-    # Write the data to a file
+    # Sla het bestand op
     with open(TXT, "w", encoding="utf-8") as file:
         file.write(response.text)
 
