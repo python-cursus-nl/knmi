@@ -3,7 +3,7 @@ from datetime import datetime, timedelta
 import pandas as pd
 from requests_cache import CachedSession, SQLiteCache
 
-from consts import CSV, KNMI_COLUMNS, MONTH_COLUMNS, TXT, URL
+from consts import CSV, KNMI_COLUMNS, MONTH_COLUMNS, TXT, URL, CACHE
 
 now = datetime.now()
 tonight = datetime(now.year, now.month, now.day) + timedelta(days=1)
@@ -13,7 +13,7 @@ def download():
     """Download het bestand van de KNMI-website en sla het op als txt."""
 
     # Haal de gegevens op van de URL, cache de gegevens voor de rest van de dag
-    backend = SQLiteCache(db_path="../data/knmi_cache.sqlite")
+    backend = SQLiteCache(db_path=CACHE)
     session = CachedSession(expire_after=tonight, backend=backend)
     response = session.get(URL)
 

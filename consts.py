@@ -1,6 +1,7 @@
 URL = "https://cdn.knmi.nl/knmi/map/page/klimatologie/gegevens/maandgegevens/mndgeg_260_tg.txt"
-TXT = "../data/knmi.txt"
-CSV = "../data/knmi.csv"
+TXT = "./bestanden/knmi.txt"
+CSV = "./bestanden/knmi.csv"
+CACHE = "./bestanden/knmi_cache.sqlite"
 
 KNMI_COLUMNS = {
     "STN": "Station",
