@@ -69,6 +69,9 @@ def load_data():
     # Toon de eerste 5 rijen voor een snelle inspectie
     print(df.head(), "\n")
 
+    # Inspecteer de DataFrame verder
+    print(df.info(), "\n")
+
     return df
 
 
