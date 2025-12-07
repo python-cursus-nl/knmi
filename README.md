@@ -3,7 +3,7 @@ Voorbeeld project om te leren automatisch gegevens te downloaden met [requests](
 
 | Branch   | Toelichting                                                                                                                                                                           |
 |----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| main     | Zie versie-2                                                                                                                                                                          |
+| main     | Zie versie-3                                                                                                                                                                          |
 | versie-1 | Eenvoudige versie, zoals beschreven in  [Geautomatiseerd gegevens downloaden](https://python-cursus.nl/blog/geautomatiseerd-gegevens-downloaden/).                                    |
 | versie-2 | Versie met  `pandas`, zoals beschreven in  [Werken met pandas](https://python-cursus.nl/blog/pandas-introductie/).                                                                    |
 | versie-3 | Versie met  `pandas`, waarin dieper wordt ingegaan op gegevens selecteren. Beschreven in [Gegevens selecteren met pandas](https://python-cursus.nl/blog/pandas-gegevens-selecteren/). |
